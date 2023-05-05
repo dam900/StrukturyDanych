@@ -1,0 +1,16 @@
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.csproj.AssemblyReference.cache
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.AssemblyInfoInputs.cache
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.AssemblyInfo.cs
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\Heap.exe
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\Heap.deps.json
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\Heap.runtimeconfig.json
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\Heap.runtimeconfig.dev.json
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\Heap.dll
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\ref\Heap.dll
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\bin\Debug\net5.0\Heap.pdb
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.dll
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\ref\Heap.dll
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.pdb
+C:\Users\Damian\Desktop\nauka\ISA_semestr_4\Struktury_danych\Heap\obj\Debug\net5.0\Heap.genruntimeconfig.cache
