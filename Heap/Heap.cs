@@ -15,38 +15,56 @@ namespace Heap
 
         public Heap(int size, Func<int, int, bool> relation) : base(size, relation)
         {
-            base._array = new int[size + 1]; // +1 because the enumertion will be 2n and 2+1
+            base._array = new int[size + 1]; // +1 because the enumertion will be 2n and 2n+1
         }
 
         protected override void HeapifyDown(int[] A, int pos)
         {
-            throw new NotImplementedException();
+            if (pos+2 > this._count) return;
+            int l = Left(pos);
+            int r = Right(pos);
+            if (base._relation(A[pos], A[l]) != true || base._relation(A[pos], A[r]) != true) {
+                if (base._relation(A[l], A[r]))
+                {
+                    Swap(A, l, pos);
+                    HeapifyDown(A, l);
+                }
+                else {
+                    Swap(A, r, pos);
+                    HeapifyDown(A, r);
+                }
+            }
         }
 
         protected override void HeapifyUp(int[] A, int pos)
         { 
-
             int p = Parent(pos);
             if (p == 0) return;
             if (base._relation(A[p], A[pos]) != true) 
             {
-                int tmp = A[p];
-                A[p] = A[pos];
-                A[pos] = tmp;
+                Swap(A, p, pos);
             }
             HeapifyUp(A, p);
         }
 
         public override int Pop()
         {
-            throw new NotImplementedException();
+            int root = base._array[1];
+            base._array[1] = base._array[base._count];
+            this.freePos--;
+            base._count--;
+            HeapifyDown(base._array, 1);
+
+            return root;
         }
+
 
         public override void Push(int val)
         {
             base._array[freePos] = val;
             HeapifyUp(base._array, this.freePos);
             this.freePos++;
+            base._count++;
         }
 
         private static int Parent(int i)
@@ -63,8 +81,15 @@ namespace Heap
             return 2 * i + 1;
         }
 
-        public void printHeap() {
-            for (int i = 1; i <= base._array.Length - 1 ; i++) {
+        private static void Swap(int[] A, int p1, int p2)
+        {
+            int tmp = A[p1];
+            A[p1] = A[p2];
+            A[p2] = tmp;
+        }
+
+        public void PrintHeap() {
+            for (int i = 1; i <= base._count; i++) {    
                 Console.WriteLine(base._array[i]);
             }
         }

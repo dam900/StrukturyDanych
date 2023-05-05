@@ -48,13 +48,13 @@ namespace Heap
         public abstract void Push(int val);
 
         /// <summary>
-        /// Fixes heap realtion from the bottom to the root
+        /// Fixes heap relation from the bottom to the root
         /// </summary>
         protected abstract void HeapifyUp(int[] A, int pos);
 
 
         /// <summary>
-        /// Fixes heap realtion form the root to the bottom 
+        /// Fixes heap relation from the root to the bottom 
         /// </summary>
         protected abstract void HeapifyDown(int[] A, int pos);
 
