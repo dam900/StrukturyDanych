@@ -9,7 +9,7 @@ namespace Heap
     class Heap : AbstractHeap
     {
         /// <summary>
-        /// Position where the next elelemnt can be added
+        /// Position where the next element can be added
         /// </summary>
         protected int freePos = 1;
 
@@ -18,7 +18,7 @@ namespace Heap
             base._array = new int[size + 1]; // +1 because the enumertion will be 2n and 2n+1
         }
 
-        protected override void HeapifyDown(int[] A, int pos)
+        protected override void ShiftDown(int[] A, int pos)
         {
             if (pos+2 > this._count) return;
             int l = Left(pos);
@@ -27,16 +27,16 @@ namespace Heap
                 if (base._relation(A[l], A[r]))
                 {
                     Swap(A, l, pos);
-                    HeapifyDown(A, l);
+                    ShiftDown(A, l);
                 }
                 else {
                     Swap(A, r, pos);
-                    HeapifyDown(A, r);
+                    ShiftDown(A, r);
                 }
             }
         }
 
-        protected override void HeapifyUp(int[] A, int pos)
+        protected override void ShiftUp(int[] A, int pos)
         { 
             int p = Parent(pos);
             if (p == 0) return;
@@ -44,7 +44,7 @@ namespace Heap
             {
                 Swap(A, p, pos);
             }
-            HeapifyUp(A, p);
+            ShiftUp(A, p);
         }
 
         public override int Pop()
@@ -53,7 +53,7 @@ namespace Heap
             base._array[1] = base._array[base._count];
             this.freePos--;
             base._count--;
-            HeapifyDown(base._array, 1);
+            ShiftDown(base._array, 1);
 
             return root;
         }
@@ -62,7 +62,7 @@ namespace Heap
         public override void Push(int val)
         {
             base._array[freePos] = val;
-            HeapifyUp(base._array, this.freePos);
+            ShiftUp(base._array, this.freePos);
             this.freePos++;
             base._count++;
         }
@@ -92,6 +92,11 @@ namespace Heap
             for (int i = 1; i <= base._count; i++) {    
                 Console.WriteLine(base._array[i]);
             }
+        }
+
+        public override bool Contains(int val)
+        {
+            return base._array.Contains(val);
         }
     }
 }

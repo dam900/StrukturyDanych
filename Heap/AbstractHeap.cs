@@ -14,7 +14,7 @@ namespace Heap
         protected int _count = 0;
 
         /// <summary>
-        /// Maximum numeber of elements that the heap can contain
+        /// Maximum number of elements that the heap can contain
         /// </summary>
         protected int _size;
             
@@ -50,13 +50,19 @@ namespace Heap
         /// <summary>
         /// Fixes heap relation from the bottom to the root
         /// </summary>
-        protected abstract void HeapifyUp(int[] A, int pos);
+        protected abstract void ShiftUp(int[] A, int pos);
 
 
         /// <summary>
         /// Fixes heap relation from the root to the bottom 
         /// </summary>
-        protected abstract void HeapifyDown(int[] A, int pos);
+        protected abstract void ShiftDown(int[] A, int pos);
 
+        /// <summary>
+        /// Find out if value is present in the heap
+        /// </summary>
+        /// <param name="val"></param>
+        /// <returns>true if value is present, false otherwise </returns>
+        public abstract bool Contains(int val);
     }
 }

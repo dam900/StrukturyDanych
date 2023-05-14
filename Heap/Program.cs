@@ -17,7 +17,7 @@ namespace Heap
             maxHeap.Push(5);
             maxHeap.Push(3);
             maxHeap.printHeap();*/
-            Heap minHeap = new Heap(10, (int a, int b) => a >= b);
+            Heap minHeap = new Heap(10, (int a, int b) => a <= b);
             minHeap.Push(10);
             minHeap.Push(8);
             minHeap.Push(1);
