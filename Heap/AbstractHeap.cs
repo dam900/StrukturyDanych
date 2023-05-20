@@ -43,6 +43,13 @@ namespace Heap
         public abstract int Pop();
 
         /// <summary>
+        /// Get the value of a root
+        /// without removing it
+        /// </summary>
+        /// <returns></returns>
+        public abstract int Peek();
+
+        /// <summary>
         /// Adds element to the heap
         /// </summary>
         public abstract void Push(int val);

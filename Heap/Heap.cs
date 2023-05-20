@@ -20,7 +20,7 @@ namespace Heap
 
         protected override void ShiftDown(int[] A, int pos)
         {
-            if (pos+2 > this._count) return;
+            if (Right(pos) > this._count || Left(pos) > this._count) return;
             int l = Left(pos);
             int r = Right(pos);
             if (base._relation(A[pos], A[l]) != true || base._relation(A[pos], A[r]) != true) {
@@ -97,6 +97,11 @@ namespace Heap
         public override bool Contains(int val)
         {
             return base._array.Contains(val);
+        }
+
+        public override int Peek()
+        {
+            return base._array[1];
         }
     }
 }
